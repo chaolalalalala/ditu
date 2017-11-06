@@ -7,7 +7,7 @@
 </head>
 <style>
     .kuang {
-        width: 50px;
+        width: auto;
         height:30px;
         background: cyan;
         position: absolute;
@@ -28,23 +28,30 @@
 </style>
 <body>
 <div class="ditu">
-    <div class="kuang"></div>
     <img src="images/aaa.png" alt="">
 </div>
 </body>
 <script>
-    var d=71;
-    var x=136;
-    var b=53.31;
-    var n=19;
-    var arr=[{data:"太原",x:117,y:36.65}]
-    var c=(arr[0].x-d)/65;
-    var a=(arr[0].y-n)/34.31;
-    var w=$(".ditu").width();
-    var h=$(".ditu").height();
-    var j=w*c;
-    var k=h*a-30;
-    console.log(618/c)
-    $(".kuang").css({bottom:k+"px",left:j+"px"})
+    function aa(dm,xz,yz) {
+        var d=70.5;
+        var x=135;
+        var b=53.31;
+        var n=19;
+//    var arr=[{data:"太原",x:117,y:36.65}]
+        var arr=[{data:"dm",x:xz ,y:yz}]
+//    var arr=[{data:"太原",x:112.55,y:37.87}]
+        var c=(arr[0].x-d)/62;
+        var a=(arr[0].y-n)/34.31;
+        var w=$(".ditu").width();
+        var h=$(".ditu").height();
+        var j=w*c;
+        var k=h*a-30;
+        console.log(618/c)
+        $('<div class="kuang">').appendTo('.ditu').html(dm).css({bottom:k+"px",left:j+"px"})
+    }
+    aa("JiNan",117,36.65)
+    aa("TaiYuan",112.55,37.87)
+    aa("BeiJing",116.40,39.90)
+
 </script>
 </html>
